@@ -1,0 +1,14 @@
+# Prevent execution of PHP files in uploads directory
+<Files *.php>
+    Deny from all
+</Files>
+
+# Prevent access to .htaccess file
+<Files .htaccess>
+    Deny from all
+</Files>
+
+# Allow image files
+<FilesMatch "\.(jpg|jpeg|png|gif|webp)$">
+    Allow from all
+</FilesMatch>
